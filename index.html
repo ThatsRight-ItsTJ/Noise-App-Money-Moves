@@ -149,5 +149,18 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // Device detection function
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                   (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform));
+        }
+
+        // Set global redirect URL based on device
+        window.noiseRedirectUrl = isMobileDevice() ? 
+            'https://noise.onelink.me/5Plp/74pvd9jw' : 
+            'https://getnoise.com/get-started';
+    </script>
 </body>
 </html>
